@@ -11,10 +11,10 @@ SoftwareSerial neo6m(RXPin, TXPin);
 
 TinyGPSPlus gps;
              
-const char *ssid = "smarthouse";
-const char *password = "ahmad123";
+const char *ssid = "ENTER_YOUR_WIFI_SSID";
+const char *password = "ENTER_YOUR_WIFI_PASSWORD";
 
-const char GMAP_API_KEY = "AIzaSyDHNUG9E870MPZ38LzijxoPyPgtiUFYjTM";
+const char GMAP_API_KEY = "ENTER_GOOGLE_MAPS_API_KEY";
 
 WiFiServer server(80);
 
