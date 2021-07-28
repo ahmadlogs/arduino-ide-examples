@@ -3,8 +3,8 @@
 //sender phone number with country code
 const String PHONE = "Enter_Your_Phone_No";
 
-//GSM Module RX pin to Arduino 3
-//GSM Module TX pin to Arduino 2
+//GSM Module RX pin to NodeMCU D3
+//GSM Module TX pin to NodeMCU D4
 #define rxPin D4
 #define txPin D3
 SoftwareSerial sim800(rxPin,txPin);
