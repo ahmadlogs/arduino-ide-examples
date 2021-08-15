@@ -4,7 +4,7 @@
 //Alarm reciever's phone number with country code
 //NOTE: Must be your personal phone number here
 //this is not gsm module phone number
-const String PHONE = "+923451234567";
+const String PHONE = "ENTER_YOUR_PHONE_NUMBER";
 //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
 //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
