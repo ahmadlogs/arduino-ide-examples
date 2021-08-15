@@ -24,6 +24,7 @@ boolean laser_flag = 0;
 #define BUZZER_PIN 8
 //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
+//______________________________________________________________________________________
 void setup()
 {
   //----------------------------------------------------------------
@@ -50,7 +51,9 @@ void setup()
   delay(1000);
   //----------------------------------------------------------------
 }
+//______________________________________________________________________________________
 
+//______________________________________________________________________________________
 void loop()
 {
   while(sim800L.available()){
@@ -80,8 +83,9 @@ void loop()
   }
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 }
+//______________________________________________________________________________________
 
-//NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+//______________________________________________________________________________________
 void make_call()
 {
     Serial.println("calling....");
@@ -90,4 +94,4 @@ void make_call()
     sim800L.println("ATH");
     delay(1000); //1 sec delay
 }
-//NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+//______________________________________________________________________________________
