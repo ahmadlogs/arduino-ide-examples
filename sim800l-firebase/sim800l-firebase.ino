@@ -353,7 +353,8 @@ boolean is_gprs_connected()
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Handling AT COMMANDS
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-boolean waitResponse(String expected_answer="OK", unsigned int timeout=2000)
+//boolean waitResponse(String expected_answer="OK", unsigned int timeout=2000) //uncomment if syntax error (arduino)
+boolean waitResponse(String expected_answer, unsigned int timeout) //uncomment if syntax error (esp8266)
 {
   uint8_t x=0, answer=0;
   String response;
