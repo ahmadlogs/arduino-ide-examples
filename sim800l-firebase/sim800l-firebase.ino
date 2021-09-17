@@ -1,8 +1,9 @@
 /*
  * ******************************************************************
  * Created By: Tauseef Ahmad
- * Tutorial Link: 
- * My Channel:
+ * Created on: 15-sep-2021
+ * Tutorial Link: https://youtu.be/gLYaIgAKhjo
+ * My Channel: https://www.youtube.com/channel/UCOXYfOHgu-C-UfGyDcu5sYw/
  * 
  * ******************************************************************
  * Download DHT11 Library:
