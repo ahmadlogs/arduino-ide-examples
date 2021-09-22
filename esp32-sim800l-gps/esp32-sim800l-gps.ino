@@ -38,7 +38,7 @@ void setup() {
 
   sim800.print("AT+CMGF=1\r"); //SMS text mode
   delay(1000);
-}
+} //setup function ends
 
 void loop() {
 //*************************************************
