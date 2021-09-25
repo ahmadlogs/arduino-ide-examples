@@ -1,7 +1,16 @@
 /*
+ * ******************************************************************
+ * Created By: Tauseef Ahmad
+ * Created On: September 25, 2021
+ * Tutorial Link: https://youtu.be/uLJqNfX81C4
+ * My Channel: https://www.youtube.com/channel/UCOXYfOHgu-C-UfGyDcu5sYw/
+ * 
+ * ******************************************************************
  * IR Remote Version 3.3.0
  * https://github.com/Arduino-IRremote/Arduino-IRremote
+ * ******************************************************************
  */
+
 #include <SoftwareSerial.h>
 #include <IRremote.h>
 
