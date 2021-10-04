@@ -1,8 +1,8 @@
 //sender phone number with country code
 const String PHONE = "ENTER_YOUR_PHONE_NUMBER_HERE";
 
-//GSM Module RX pin to Arduino 3
-//GSM Module TX pin to Arduino 2
+//GSM Module RX pin to ESP32 Pin 2
+//GSM Module TX pin to ESP32 Pin 4
 #define rxPin 4
 #define txPin 2
 #define BAUD_RATE 9600
