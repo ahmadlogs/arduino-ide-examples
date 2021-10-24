@@ -7,7 +7,6 @@
 //GPS Module RX pin to NodeMCU D1
 //GPS Module TX pin to NodeMCU D2
 const int RXPin = 4, TXPin = 5;
-const uint32_t GPSBaud = 9600; 
 SoftwareSerial neo6m(RXPin, TXPin);
 
 TinyGPSPlus gps;
