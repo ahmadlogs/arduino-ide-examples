@@ -15,7 +15,7 @@ TinyGPSPlus gps;
 const char *ssid = "ENTER_YOUR_WIFI_SSID";
 const char *password = "ENTER_YOUR_WIFI_PASSWORD";
 
-const char GMAP_API_KEY = "ENTER_GOOGLE_MAPS_API_KEY";
+String GMAP_API_KEY = "ENTER_GOOGLE_MAPS_API_KEY";
 
 WiFiServer server(80);
 
