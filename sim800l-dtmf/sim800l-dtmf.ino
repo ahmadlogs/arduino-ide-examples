@@ -43,7 +43,7 @@ void loop()
     Serial.println(buff);
     
     //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-    if(is_call = true)
+    if(is_call == true)
     {
       //HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
       if(int index = buff.indexOf("+DTMF:") > -1 )
