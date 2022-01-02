@@ -3,7 +3,7 @@
  * Created By: Tauseef Ahmad
  * Created On: December 31, 2021
  * 
- * Tutorial: 
+ * Tutorial: https://youtu.be/pdBrvLGH0PE
  *
  * ****************************************************************************
  * Download Resources
@@ -11,6 +11,7 @@
  *  Download RFID library:
  *  https://github.com/miguelbalboa/rfid
  **********************************************************************************/
+
 //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 #include <SPI.h>
 #include <MFRC522.h>
@@ -19,7 +20,7 @@
 #define RST_PIN 9
 //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 byte readCard[4];
-String MasterTag = "CA59E881";
+String MasterTag = "ENTER_YOUR_TAG_ID";
 String tagID = "";
 //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 // Create instances
