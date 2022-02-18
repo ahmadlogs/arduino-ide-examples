@@ -1,3 +1,19 @@
+/*
+ * ------------------------------------------------------------------------
+ * Created by: Tauseef Ahmad
+ * Created on: 27 January 2022
+ *  
+ *  Video Tutorial:
+ *  https://youtu.be/zB0qxa_sjTQ
+ *  
+ * ------------------------------------------------------------------------
+ * Download Resources
+ * ------------------------------------------------------------------------
+ * Preferences--> Aditional boards Manager URLs : 
+ * For ESP8266 and NodeMCU:
+ * http://arduino.esp8266.com/stable/package_esp8266com_index.json
+ * ------------------------------------------------------------------------*/
+
 #include <SoftwareSerial.h>
 //------------------------------------------------
 //GSM Module RX pin to Arduino 3
