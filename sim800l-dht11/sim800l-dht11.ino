@@ -29,8 +29,9 @@ void setup() {
   Serial.println("SIM800L software serial initialize");
   sim800.begin(9600);
   sim800.println("AT+CMGF=1");
-
-  delay(2000);
+  delay(1000);
+  sim800.println("AT+CNMI=1,1,0,0,0"); 
+  delay(1000);
 }
 
 void loop()
