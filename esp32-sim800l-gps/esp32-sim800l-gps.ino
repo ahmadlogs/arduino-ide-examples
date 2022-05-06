@@ -93,6 +93,10 @@ void parseData(String buff){
           sendSpeed();
         }
       }
+      smsStatus = "";
+      senderNumber="";
+      receivedDate="";
+      msg="";
     }
   //////////////////////////////////////////////////
   }
