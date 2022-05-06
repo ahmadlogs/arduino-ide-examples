@@ -1,3 +1,10 @@
+/* ------------------------------------------------------------------------
+ * Created by: Tauseef Ahmad
+ * Created on: 2 May, 2022
+ *  
+ * Tutorial: https://youtu.be/M9Sci4nsTEk
+ * ------------------------------------------------------------------------*/
+
 #include <SoftwareSerial.h>
 
 #define rxPin 2
