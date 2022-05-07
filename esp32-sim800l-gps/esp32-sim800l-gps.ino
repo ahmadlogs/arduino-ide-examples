@@ -36,7 +36,9 @@ void setup() {
   receivedDate="";
   msg="";
 
-  sim800.print("AT+CMGF=1\r"); //SMS text mode
+  sim800.println("AT+CMGF=1"); //SMS text mode
+  delay(1000);
+  sim800.println("AT+CMGD=1,4"); //delete all saved SMS
   delay(1000);
 } //setup function ends
 
@@ -93,6 +95,8 @@ void parseData(String buff){
           sendSpeed();
         }
       }
+      sim800.println("AT+CMGD=1,4"); //delete all saved SMS
+      delay(1000);
       smsStatus = "";
       senderNumber="";
       receivedDate="";
