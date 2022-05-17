@@ -1,10 +1,19 @@
+/* ------------------------------------------------------------------------
+ * Created by: Tauseef Ahmad
+ * Created on: 12 May, 2022
+ *  
+ * Tutorial: https://youtu.be/B_5nn7URZTk
+ * ------------------------------------------------------------------------*/
+
 #include<SoftwareSerial.h>
-unsigned long previousMillis = 0;
+
 SoftwareSerial sim800l(2, 3);
+//---------------------------------------------------------------------------------------------
 boolean getResponse(String expected_answer, unsigned int timeout = 1000){
   boolean flag = false;
   String response = "";
   unsigned long previous;
+  //*************************************************************
   for(previous=millis(); (millis() - previous) < timeout;){
     while(sim800l.available()){
       response = sim800l.readString();
@@ -14,14 +23,15 @@ boolean getResponse(String expected_answer, unsigned int timeout = 1000){
       }
     }
   }
+  //*************************************************************
   OUTSIDE:
   if(response != ""){Serial.println(response);}
   return flag;
 }
-#define RESET_PIN 4
-
+//---------------------------------------------------------------------------------------------
 boolean tryATcommand(String cmd, String expected_answer, int timeout, int total_tries){
   TryAgain:
+  //*************************************************************
   for(int i=1; i<=total_tries; i++){
     sim800l.println(cmd);
     if(getResponse("OK", 1000) == true){
@@ -38,7 +48,12 @@ boolean tryATcommand(String cmd, String expected_answer, int timeout, int total_
       goto TryAgain;
     }
   }
+  //*************************************************************
 }
+//---------------------------------------------------------------------------------------------
+#define RESET_PIN 4
+unsigned long previousMillis = 0;
+//---------------------------------------------------------------------------------------------
 
 void setup() {
   pinMode(RESET_PIN, OUTPUT);
