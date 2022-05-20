@@ -396,11 +396,6 @@ void doAction(String phoneNumber){
       phoneNo[2] = "";
       phoneNo[3] = "";
       phoneNo[4] = "";
-      offsetPhone[0] = "";
-      offsetPhone[1] = "";
-      offsetPhone[2] = "";
-      offsetPhone[3] = "";
-      offsetPhone[4] = "";
       debugPrint("All phone numbers are deleted.");
       Reply("All phone numbers are deleted.", phoneNumber);
   }
@@ -444,7 +439,7 @@ void Reply(String text, String Phone)
 void writeToEEPROM(int addrOffset, const String &strToWrite)
 {
   byte len = 13; //strToWrite.length();
-  EEPROM.write(addrOffset, len);
+  //EEPROM.write(addrOffset, len);
   for (int i = 0; i < len; i++)
   {
     EEPROM.write(addrOffset + i, strToWrite[i]);
