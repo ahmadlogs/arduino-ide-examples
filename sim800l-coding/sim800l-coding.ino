@@ -34,7 +34,7 @@ boolean tryATcommand(String cmd, String expected_answer, int timeout, int total_
   //*************************************************************
   for(int i=1; i<=total_tries; i++){
     sim800l.println(cmd);
-    if(getResponse("OK", 1000) == true){
+    if(getResponse(expected_answer, timeout) == true){
       break;
     }
     else {
