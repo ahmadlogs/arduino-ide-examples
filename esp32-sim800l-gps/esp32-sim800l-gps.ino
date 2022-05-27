@@ -86,7 +86,8 @@ void parseData(String buff){
     }
     else if(cmd == "+CMGR"){
       extractSms(buff);
-      //Serial.println("extractSms Success.");
+      Serial.println("Sender Number: "+senderNumber);
+      Serial.println("PHONE: "+PHONE);
       if(senderNumber == PHONE){
         if(msg == "get location"){
           sendLocation();
