@@ -1,3 +1,16 @@
+/************************************************************************************
+ *  Created By: Tauseef Ahmad
+ *  Created On: 7 June, 2022
+ *  
+ *  YouTube Video: https://youtu.be/gKuJxjxNP-k
+ *  My Channel: https://www.youtube.com/channel/UCOXYfOHgu-C-UfGyDcu5sYw/
+ *  
+ *  *********************************************************************************
+ *  Preferences--> Aditional boards Manager URLs : 
+ *  For ESP32:
+ *  https://dl.espressif.com/dl/package_esp32_index.json
+ * ********************************************************************************/
+
 //---------------------------------------------------------------------------
 #include "U8glib.h"
 U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE|U8G_I2C_OPT_DEV_0);
