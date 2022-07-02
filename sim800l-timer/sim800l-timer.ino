@@ -69,6 +69,8 @@ void setup() {
   delay(500);
   sim800.print("AT+CLIP=1\r\n"); //Enable Caller ID
   delay(500);
+  sim800.print("AT+CMGD=1\r\n"); //Delete all sms
+  delay(500);
   //--------------------------------------------------
 }
 
@@ -187,6 +189,8 @@ void parseData(String buff){
     doAction(senderNumber);
   }
   //---------------------------------------------------------------------
+  sim800.print("AT+CMGD=1\r\n"); //Delete all sms
+  delay(500);
 }
 
 
