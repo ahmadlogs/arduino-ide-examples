@@ -297,16 +297,16 @@ void doAction(String cmd, String caller_id){
   }
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   else if(cmd == "stat=1"){
-    sendStatus(STATE_RELAY_1,caller_id);
+    sendStatus(1, STATE_RELAY_1,caller_id);
   }
   else if(cmd == "stat=2"){
-    sendStatus(STATE_RELAY_2,caller_id);
+    sendStatus(2, STATE_RELAY_2,caller_id);
   }
   else if(cmd == "stat=3"){
-    sendStatus(STATE_RELAY_3,caller_id);
+    sendStatus(3, STATE_RELAY_3,caller_id);
   }
   else if(cmd == "stat=4"){
-    sendStatus(STATE_RELAY_4,caller_id);
+    sendStatus(4, STATE_RELAY_4,caller_id);
   }
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   else if(cmd.indexOf("r2=") > -1){
@@ -439,7 +439,8 @@ String getNumber(String text){
 void controlRelayGSM(int relay_no, int relay_pin, boolean status, String caller_id){
   digitalWrite(relay_pin, status);
   EEPROM.update(totalMemory+relay_no,status);
-  String text = "Relay "+String(relay_no)+" is ON";
+  String text = (status)? "ON" : "OFF";
+  text = "Relay "+String(relay_no)+" is " +text;
   Serial.println(text);
   Reply(text, caller_id);
 }
@@ -447,10 +448,11 @@ void controlRelayGSM(int relay_no, int relay_pin, boolean status, String caller_
 /*******************************************************************************
  * sendStatus function:
  ******************************************************************************/
-void sendStatus(boolean status, String caller_id){
+void sendStatus(int relay_no, boolean status, String caller_id){
   String text = (status)? "ON" : "OFF";
-  Serial.println("Relay is "+text);
-  Reply("Relay is "+text, caller_id);
+  text = "Relay "+String(relay_no)+" is " +text;
+  Serial.println(text);
+  Reply(text, caller_id);
 }
 
 /*******************************************************************************
