@@ -524,8 +524,13 @@ boolean comparePhone(String number)
 
 void LoadStateEEPROM()
 {
-  digitalWrite(RELAY_1, EEPROM.read(totalMemory+1)); delay(200);
-  digitalWrite(RELAY_2, EEPROM.read(totalMemory+2)); delay(200);
-  digitalWrite(RELAY_3, EEPROM.read(totalMemory+3)); delay(200);
-  digitalWrite(RELAY_4, EEPROM.read(totalMemory+4)); delay(200);
+  STATE_RELAY_1 = EEPROM.read(totalMemory+1); delay(200);
+  STATE_RELAY_2 = EEPROM.read(totalMemory+2); delay(200);
+  STATE_RELAY_3 = EEPROM.read(totalMemory+3); delay(200);
+  STATE_RELAY_4 = EEPROM.read(totalMemory+4); delay(200);
+  
+  digitalWrite(RELAY_1, STATE_RELAY_1);
+  digitalWrite(RELAY_2, STATE_RELAY_2);
+  digitalWrite(RELAY_3, STATE_RELAY_3);
+  digitalWrite(RELAY_4, STATE_RELAY_4);
 }  
