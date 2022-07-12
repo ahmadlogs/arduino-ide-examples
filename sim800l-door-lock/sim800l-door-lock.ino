@@ -13,7 +13,7 @@
 //Sender phone number with country code.
 //Don't enter the phone number of the 
 //sim card inserted into SIM800L
-const String PHONE = "+923007868086";
+const String PHONE = "ENTER_PHONE_WITH_COUNTRY_CODE";
 //---------------------------------------------------------
 long unlock_duration      = 20000; //20 seconds
 boolean lock_status       = false;
