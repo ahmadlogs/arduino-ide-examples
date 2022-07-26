@@ -135,6 +135,11 @@ void setup() {
   getResponse("OK",1000);
   sim800.println("AT+CNMI=1,2,0,0,0");
   getResponse("OK",1000);
+  //delete all sms
+  sim800.println("AT+CMGD=1,4");
+  delay(1000);
+  sim800.println("AT+CMGDA= \"DEL ALL\"");
+  delay(1000);
   //-------------------------------------------------------------------
   Serial.println(GetRegisteredPhoneNumbersList());
   //-------------------------------------------------------------------
@@ -175,6 +180,11 @@ while(sim800.available()){
     //any one of the phone numbers stored in the eeprom.
     if(comparePhone(callerID)){
       doAction(cmd, callerID);
+      //delete all sms
+      sim800.println("AT+CMGD=1,4");
+      delay(1000);
+      sim800.println("AT+CMGDA= \"DEL ALL\"");
+      delay(1000);
     }
     else {
       String text = "Error: Please register your phone number first";
