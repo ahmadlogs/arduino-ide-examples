@@ -189,12 +189,13 @@ void parseData(String buff){
   else if(cmd == "+CMGR"){
     extractSms(buff);
     doAction(senderNumber);
+    //delete sms
+    sim800.print("AT+CMGD=1\r\n"); //Delete all sms
+    delay(1000);
+    sim800.println("AT+CMGDA= \"DEL ALL\"");
+    delay(1000);
   }
   //---------------------------------------------------------------------
-  sim800.print("AT+CMGD=1\r\n"); //Delete all sms
-  delay(1000);
-  sim800.println("AT+CMGDA= \"DEL ALL\"");
-  delay(1000);
 
 }
 
