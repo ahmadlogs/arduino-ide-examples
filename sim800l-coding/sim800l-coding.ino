@@ -94,3 +94,28 @@ void loop() {
   }
 
 }
+
+
+
+
+/*
+bool tryATcommand(String cmd, String expected_answer, int timeout, int total_tries) {
+  int num_attempts = 0;
+  bool response_received = false;
+  while (!response_received && num_attempts < total_tries) {
+    sim800l.println(cmd);
+    response_received = getResponse(expected_answer, timeout);
+    if (!response_received) {
+      Serial.print(".");
+      num_attempts++;
+    }
+  }
+  if (!response_received) {
+    Serial.println("Failed to get response after multiple attempts. Resetting the module...");
+    digitalWrite(RESET_PIN, LOW);
+    delay(100);
+    digitalWrite(RESET_PIN, HIGH);
+  }
+  return response_received;
+}
+*/
